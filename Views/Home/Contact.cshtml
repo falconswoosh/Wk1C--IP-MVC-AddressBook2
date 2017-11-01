@@ -1,0 +1,10 @@
+@{
+  Layout = "_Layout";
+}
+<h1 id="contacts">Contacts List</h1>
+<ul>
+  @foreach (var contact in Model)
+  {
+    <li class="listOut"><a href='/contacts/@contact.GetId()'>@contact.GetLastName(), @contact.GetFirstName()</a></li>
+  }
+</ul>
